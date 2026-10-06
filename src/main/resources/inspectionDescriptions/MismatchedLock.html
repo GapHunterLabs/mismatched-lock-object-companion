@@ -1,0 +1,10 @@
+<html>
+<body>
+Reports a <code>synchronized</code> block whose lock object provably differs from another lock that guards the same
+field elsewhere in the class.
+<!-- tooltip end -->
+<p>Two different locks around the same field do not exclude each other, so the code looks thread-safe but is not
+(SEI CERT LCK00-J, LCK06-J). Only locks proven distinct are reported: both lock fields are <code>final</code> and each
+is initialized with its own <code>new</code> expression.</p>
+</body>
+</html>
